@@ -6,12 +6,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Create floating elements (hearts, flowers, and photos)
     const elements = ['❤️', '🌸', '✨', '💖', '🌺', '🌷', '🦋', '💐'];
-    // Danh sách các ảnh trong folder images
-    const userImages = [
-        'images/1.jpg', 'images/2.jpg', 'images/3.jpg',
-        'images/4.jpg', 'images/5.jpg', 'images/6.jpg',
-        'images/7.jpg', 'images/8.jpg', 'images/9.jpg'
-    ];
+    // Danh sách các ảnh trong folder images - tự động load tất cả
+    const imageCount = 10; // Cập nhật số lượng ảnh ở đây
+    const userImages = Array.from({length: imageCount}, (_, i) => `images/${i + 1}.jpg`);
+    
     const maxElements = 35; // increased for better visual effect
     let elementsArray = [];
 
